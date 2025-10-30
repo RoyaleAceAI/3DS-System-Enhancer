@@ -1,13 +1,13 @@
 DEVKITPRO ?= /opt/devkitpro
 include $(DEVKITPRO)/3dsRules
 
-TARGETS := overlay advanced_settings
+TARGETS := overlay_graphic enhanced_settings
 
-overlay_SOURCES := source/overlay.c source/system_utils.h source/json_parser.h
-overlay_TARGET := overlay
+overlay_graphic_SOURCES := source/overlay_graphic.c source/system_utils.h source/json_parser.h
+overlay_graphic_TARGET := overlay_graphic
 
-advanced_settings_SOURCES := source/advanced_settings.c source/system_utils.h source/json_parser.h
-advanced_settings_TARGET := advanced_settings
+enhanced_settings_SOURCES := source/enhanced_settings.c source/system_utils.h source/json_parser.h
+enhanced_settings_TARGET := enhanced_settings
 
 all: $(TARGETS:%=%.3dsx)
 
